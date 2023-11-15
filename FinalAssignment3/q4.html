@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 200px;
+            background:blue;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="but">clikc me</button>
+    <div id="my">OhhOOO</div>
+    <script>
+        $("#but").click(function(){
+            $("#my").slideDown(1000);
+        });
+        $("#but").click(function(){
+            $("#my").animate({opacity:0.5,width:"100px",height:"100px"},1000)
+        });
+        $("#but").click(function(){
+            $("#my").fadeIn(1000)
+        });
+        $("#but").click(function(){
+            $("#my").hide(1000)
+            $("#my").fadeIn(1000)
+        });
+        $("#but").click(function(){
+            $("#my").show(1000)
+        });
+        $("#but").click(function(){
+            $("#my").mouseenter(function(){
+                $(this).css("background-color","lightgreen")
+            });
+        });
+        $("#but").click(function(){
+            $("#my").dblclick(function(){
+                alert("doubleclikc hua bro")
+            })
+        });
+        $("#but").click(function(){
+             $("#my").mouseleave(function(){
+                 $(this).css("background-color","purple")
+             })
+        });
+        $("#but").click(function(){
+            $("#my").attr("title","Dynamic title");
+        });
+        $("#but").click(function(){
+            $("#my").html("New content");
+        });
+    </script>
+</body>
+</html>
